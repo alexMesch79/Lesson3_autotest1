@@ -29,7 +29,6 @@ public class PracticeformTest {
         $("[id=userEmail]").setValue("Lenin@yandex.ru");
         $("[for=gender-radio-1]").click();
         $("[id=userNumber]").setValue("9273731234");
-
         $("[id=dateOfBirthInput]").click();
         $(".react-datepicker__month-select").selectOption("April");
         $(".react-datepicker__year-select").selectOption("1935");
@@ -41,6 +40,7 @@ public class PracticeformTest {
         $("[for=hobbies-checkbox-3]").click();
         $("[id=uploadPicture]").uploadFile(new File("src/main/java/resources/Picture.jpg"));
         $("[id=currentAddress]").setValue("RF, Moscow City, Red Area, House 1");
+
         $(byText("Select State")).click();
         $(withText("Haryana")).click();
         $(byText("Select City")).click();
