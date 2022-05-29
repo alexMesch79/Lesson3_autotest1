@@ -45,7 +45,7 @@ public class PracticeformTest {
         $(withText("Haryana")).click();
         $(byText("Select City")).click();
         $(withText("Panipat")).click();
-
+        $("[id=submit]").click();
     }
 
 }
