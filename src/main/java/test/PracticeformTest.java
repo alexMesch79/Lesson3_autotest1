@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import java.io.File;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
@@ -40,12 +41,23 @@ public class PracticeformTest {
         $("[for=hobbies-checkbox-3]").click();
         $("[id=uploadPicture]").uploadFile(new File("src/main/java/resources/Picture.jpg"));
         $("[id=currentAddress]").setValue("RF, Moscow City, Red Area, House 1");
-
         $(byText("Select State")).click();
         $(withText("Haryana")).click();
         $(byText("Select City")).click();
         $(withText("Panipat")).click();
         $("[id=submit]").click();
+
+        $(".modal-body").shouldHave(
+                text("Vladimir Ulyanov"),
+                text("Lenin@yandex.ru"),
+                text("Male"),
+                text("9273731234"),
+                text("3 April,1935"),
+                text("Arts"),
+                text("Sports, Reading, Music"),
+                text("Picture.jpg"),
+                text("RF, Moscow City, Red Area, House 1"),
+                text("Haryana Panipat"));
     }
 
 }
