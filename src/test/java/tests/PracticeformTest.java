@@ -20,7 +20,7 @@ public class PracticeformTest {
         Configuration.browserSize = "1920x1080";
     }
     @Test
-    void HomeTask3(){
+    void homeTask3(){
         open("/automation-practice-form");
         executeJavaScript("$('footer').remove()");
         executeJavaScript("$('#fixedban').remove()");
