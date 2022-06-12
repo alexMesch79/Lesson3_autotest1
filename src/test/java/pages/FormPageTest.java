@@ -9,7 +9,18 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class FormPageTest {
-
+    String sFirstName = "#firstName";
+    String sLastName = "#lastName";
+    String sUserEmail = "#userEmail";
+    String sGender = "#genterWrapper";
+    String sAdress = "#currentAddress";
+    String sNumber = "#userNumber";
+    String sDataofBrith = "#dateOfBirthInput";
+    String sSubject = "#subjectsInput";
+    String sUploadPic = "#uploadPicture";
+    String sState = "#react-select-3-input";
+    String sCity = "#react-select-4-input";
+    String sSubmit = "#submit";
     CalendarCom CalendarCom = new CalendarCom();
     InputCom InputCom = new InputCom();
     ResultTable ResultTable = new ResultTable();
@@ -20,45 +31,44 @@ public class FormPageTest {
         return this;
     }
 
-
     public FormPageTest setFirstName(String value) {
-        $("[id=firstName]").setValue(value);
+        $(sFirstName).setValue(value);
         return this;
     }
 
     public FormPageTest setLastName(String value) {
-        $("[id=lastName]").setValue(value);
+        $(sLastName).setValue(value);
         return this;
     }
 
     public FormPageTest setUserMail(String value) {
-        $("[id=userEmail]").setValue(value);
+        $(sUserEmail).setValue(value);
         return this;
     }
 
     public FormPageTest setGenderMale(String value) {
-        $("#genterWrapper").$(byText(value)).click();
+        $(sGender).$(byText(value)).click();
         return this;
     }
 
     public FormPageTest setAdress(String value) {
-        $("#currentAddress").setValue(value);
+        $(sAdress).setValue(value);
         return this;
     }
 
     public FormPageTest setNumber(String value) {
-        $("#userNumber").setValue(value);
+        $(sNumber).setValue(value);
         return this;
     }
 
     public FormPageTest setDateBirht(String day, String month, String year) {
-        $("#dateOfBirthInput").click();
+        $(sDataofBrith).click();
         CalendarCom.SetDate(day, month, year);
         return this;
     }
 
     public FormPageTest setSubject(String symbol, String value) {
-        $("#subjectsInput").sendKeys(symbol);
+        $(sSubject).sendKeys(symbol);
         $(byText(value)).click();
         return this;
     }
@@ -69,22 +79,22 @@ public class FormPageTest {
     }
 
     public FormPageTest uploadFile(String value) {
-        $("#uploadPicture").uploadFromClasspath(value);
+        $(sUploadPic).uploadFromClasspath(value);
         return this;
     }
 
     public FormPageTest setState(String value) {
-        InputCom.SetValue("#react-select-3-input", value);
+        InputCom.SetValue(sState, value);
         return this;
     }
 
     public FormPageTest setCity(String value) {
-        InputCom.SetValue("#react-select-4-input", value);
+        InputCom.SetValue(sCity, value);
         return this;
     }
 
-    public FormPageTest clickSubmit () {
-        $("[id=submit]").click();
+    public FormPageTest clickSubmit() {
+        $(sSubmit).click();
         return this;
     }
 
