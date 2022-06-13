@@ -2,7 +2,6 @@ package tests;
 
 import org.junit.jupiter.api.Test;
 
-
 public class FormTestsWithObjectPageTests extends TestsBase {
     String aFirstName = "Vladimir";
     String aLastName = "Ulyanov";
@@ -15,7 +14,6 @@ public class FormTestsWithObjectPageTests extends TestsBase {
     String aFile = "Picture.jpg";
     String aAdress = "RF, Moscow City, Red Area, House 1";
     String aState = "Haryana", aCity = "Panipat";
-
 
     @Test
     void formTest() {
@@ -39,7 +37,7 @@ public class FormTestsWithObjectPageTests extends TestsBase {
                 .checkResult("Student Email", aUserMail)
                 .checkResult("Gender", aGenderMale)
                 .checkResult("Mobile", aNumber)
-                .checkResult("Date of Birth", aDataBirthDay + " " + aDataBirthMonth + "," + aDataBirthYear)      // 30 April,1935
+                .checkResult("Date of Birth", aDataBirthDay + " " + aDataBirthMonth + "," + aDataBirthYear)
                 .checkResult("Subjects", aValue)
                 .checkResult("Hobbies", aHobby1)
                 .checkResult("Hobbies", aHobby2)
@@ -47,8 +45,5 @@ public class FormTestsWithObjectPageTests extends TestsBase {
                 .checkResult("Picture", aFile)
                 .checkResult("Address", aAdress)
                 .checkResult("State and City", aState + " " + aCity);
-
-
     }
-
 }

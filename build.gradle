@@ -9,9 +9,18 @@ repositories {
     mavenCentral()
 }
 
+compileJava {
+    options.encoding = 'UTF-8'
+}
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
     implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     implementation 'com.codeborne:selenide:6.5.0'
+    implementation 'com.github.javafaker:javafaker:1.0.2'
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
 
 }
 
