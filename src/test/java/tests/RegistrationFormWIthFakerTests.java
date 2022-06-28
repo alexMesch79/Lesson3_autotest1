@@ -24,7 +24,7 @@ public class RegistrationFormWIthFakerTests extends TestsBase {
                 aValue = testData.aSubjects;
 
 
-        FormPageTest.openPage()
+        formPageTest.openPage()
                 .setFirstName(aFirstName)
                 .setLastName(aLastName)
                 .setUserMail(aUserMail)

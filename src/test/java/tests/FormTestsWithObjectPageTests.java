@@ -17,7 +17,7 @@ public class FormTestsWithObjectPageTests extends TestsBase {
 
     @Test
     void formTest() {
-        FormPageTest.openPage()
+        formPageTest.openPage()
                 .setFirstName(aFirstName)
                 .setLastName(aLastName)
                 .setUserMail(aUserMail)

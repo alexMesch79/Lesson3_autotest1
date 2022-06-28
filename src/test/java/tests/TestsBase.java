@@ -1,14 +1,11 @@
 package tests;
 
 import com.codeborne.selenide.Configuration;
-import com.github.javafaker.Faker;
 import org.junit.jupiter.api.BeforeAll;
 import pages.FormPageTest;
 
-import java.util.Locale;
-
 public class TestsBase {
-    FormPageTest FormPageTest = new FormPageTest();
+    FormPageTest formPageTest = new FormPageTest();
 
     @BeforeAll
     static void beforeAll() {
